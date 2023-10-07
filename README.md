@@ -1,1 +1,3 @@
-# Web_Entorno_Cliente_AE-1
+Somos el Grupo_03
+
+Gerard Perujo - Maria Isablel - Noelia Villahermosa
