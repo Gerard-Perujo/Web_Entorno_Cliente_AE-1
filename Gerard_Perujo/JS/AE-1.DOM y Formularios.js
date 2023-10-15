@@ -419,17 +419,29 @@ function validarFormulario(){
         comprobacion1 = 1
   }
    
+
+  /** Me creo una serie de variables para coger todos los paramentros
+   * que tiene el elemento en cuestion
+   */
   let piz1 = document.getElementById('peque')
   let piz2 = document.getElementById('medio')
   let piz3 = document.getElementById('grande')
+  /** Una vez tengo los parametros con otra variable cogo el valor
+   * que tiene ese elemento en cuestion
+   */
   let valor1 = piz1.value
   let valor2 = piz2.value
   let valor3 = piz3.value
 
+  /** Me creo una array donde estaran todos los valores que he recogido */
   let valores = [valor1, valor2, valor3]
   
   let contador = 0
   let acumulador = 0
+
+  /** y con un for recorro la array y con un switch dependiendo del valor que este seleccionado
+   * te dare el precio de la pizza y ademas el parametro comprobacion sera = 1
+   */
   for (let tipo of valores){
     switch (tipo){
       case "Pequeña":
