@@ -4,14 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM y Formularios</title>
-    <script type="text/javascript" src="JS/Requerimiento_1.js"></script>
+    <script  type="text/javascript" src="JS/AE-1.DOM y Formularios.js"></script>
 </head>
 <body>
-    <div" aling="center">
+    <div>
         <h1>MODIFICANDO EL ARBOL DOM</h1>
-        <h3>Primera Parte</h3>
+        <h2>Primera Parte</h2>
         <input type="button" id="cargar"  value="Cargar Formulario">
     </div>
     <div id="primeraParte" style="width:50%; margin: 0 auto"></div>
+
+    <hr/>
+
+   
+    <h2>Segunda Parte</h2>
+        
+    <div style="width:50%; margin: 0 auto">
+        <h1 style="text-align:center">Pizzeria la Deliziosa</h1>
+        <h3 style="text-align:center">Las mejores Pizzas a la puerta de tu Casa</h3>
+        <form>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                    <label for ="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre">
+                    <br/>
+                    <label for="direccion">Dirreccion: </label>
+                    <input type="text" id="direccion" name="direccion">
+                    <br/>
+                    <label for="Telefono">Telefono: </label>
+                    <input type="text" id="telefono" name="telefono">
+                    <br/>
+                    <label for="email">Email: </label>
+                    <input type="text" id="mail" name="email">
+            </fieldset>
+            <fieldset>
+                <legend for="pizza" >Tamaño de la Pizza</legend>
+                <input type="radio" id="peque" name="pizza" value="Pequeña">Pizza Pequeña 5€
+                <br/>
+                <input type="radio" id="medio" name="pizza" value="Mediana">Pizza Mediana 10€
+                <br/>
+                <input type="radio" id="grande" name="pizza" value="Grande">Pizza Grande 15€
+            </fieldset>
+            <fieldset>
+                <legend for="ingredientes">Ingredientes a Escoger</legend>
+                <input type="checkbox"  id="nue" name="ingredientes" value="Nue">Nueces
+                <br/>
+                <input type="checkbox"  id="miel" name="ingredientes" value="Miel">Miel
+                <br/>
+                <input type="checkbox"  id="hue" name="ingredientes" value="Hue">Huevo
+                <br/>
+                <input type="checkbox"  id="bac" name="ingredientes" value="Bac">Bacon
+                <h5>Todas nuestras pizzas llevan tomate y mozzarella por cada ingrediente 1€</h4>
+            </fieldset>
+            <br/>
+            <div style="text-align:center">
+                <input type="submit" id="encoman" value="Enviar comanda">
+                <span id="mensaje"></span>
+            </div>
+            <br/>
+        </form>
+    </div>   
+    
 </body>
 </html>

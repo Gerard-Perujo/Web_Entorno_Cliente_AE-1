@@ -332,7 +332,10 @@ function cargarFormulario(){
     
 
     /** Creamos el boton de enviar formulario */
-
+    let div5 = document.createElement("div")
+    let divAtr1 = document.createAttribute("style")
+    divAtr1.value = "text-align:center"
+    div5.setAttributeNode(divAtr1)
     let input2 = document.createElement("input")
     let i2Atr1 = document.createAttribute("type")
     let i2Atr2 = document.createAttribute("name")
@@ -343,6 +346,7 @@ function cargarFormulario(){
     input2.setAttributeNode(i2Atr1)
     input2.setAttributeNode(i2Atr2)
     input2.setAttributeNode(i2Atr3)
+    div5.appendChild(input2)
 
 
 
@@ -368,7 +372,7 @@ function cargarFormulario(){
     form.appendChild(br3)
     form.appendChild(area)
     form.appendChild(br2)
-    form.appendChild(input2)
+    form.appendChild(div5)
 
 
 
@@ -379,8 +383,208 @@ function cargarFormulario(){
    
 }
 
+
+
+/** Aqui creo la funcion para validar el formulario para el segundo requerimiento */
+
+function validarFormulario(){
+
+  let ok = true
+  let comprobacion1 = 0
+  let comprobacion2 = 0
+  let comprobacion3 = 0
+  let total = 0
+  let pizza = 0
+  let ingredientes = 0
+  let ing1 = 0
+  let ing2 = 0
+  let ing3 = 0
+  let ing4 = 0
+
+  if(nombre.value.trim() == ""){
+    alert("El campo Nombre esta vacio")
+  }
+  if(direccion.value.trim() == ""){
+    alert("El campo Direccion esta vacio")
+  }
+  if(telefono.value.trim() == ""){
+    alert("El campo Telefono esta vacio")
+  }
+  if(mail.value.trim() == ""){
+    alert("El campo Email esta vacio")
+  }
+
+  if ((nombre.value.trim() != "") && (direccion.value.trim() != "")
+      && (telefono.value.trim() != "") && (mail.value.trim() != "")){
+        comprobacion1 = 1
+  }
+   
+  let piz1 = document.getElementById('peque')
+  let piz2 = document.getElementById('medio')
+  let piz3 = document.getElementById('grande')
+  let valor1 = piz1.value
+  let valor2 = piz2.value
+  let valor3 = piz3.value
+
+  let valores = [valor1, valor2, valor3]
+  
+  let contador = 0
+  let acumulador = 0
+  for (let tipo of valores){
+    switch (tipo){
+      case "Pequeña":
+        if(document.getElementById('peque').checked){
+          pizza = 5
+          comprobacion2 = 1
+          acumulador = -1
+        }
+      break;
+      case "Mediana":
+        if(document.getElementById('medio').checked){
+          pizza = 10
+          comprobacion2 = 1
+          acumulador = -1
+        }
+        break;
+      case "Grande":
+        if(document.getElementById('grande').checked){
+          pizza = 15
+          comprobacion2 = 1
+          acumulador = -1
+        }
+        break;
+    }
+    acumulador += contador;
+    contador ++;
+    if (acumulador == 3){
+      alert("Debes escoger un tamaño de pizza")
+    }
+    
+  }  
+  
+  /** Antes de hacerlo con una array y recorrerlo con un for lo habia echo con un if
+   * pero no me convencio el codigo ya que lo veia muy tosco y enrevesado
+ 
+  if((document.getElementById('peque').checked) || 
+    (document.getElementById('medio').checked) || 
+    (document.getElementById('grande').checked))  {
+      if(document.getElementById('peque').checked){
+        pizza = 5
+      }
+      if(document.getElementById('medio').checked){
+        pizza = 10
+      }
+      if (document.getElementById('grande').checked){
+       pizza = 15
+      }
+      comprobacion2 = 1
+    }else{
+    alert("Debes seleccionar almenos un Tamaño de Pizza")
+  }
+  */
+
+ /**  
+  if((document.getElementById('nue').checked) ||
+    (document.getElementById('miel').checked) ||
+    (document.getElementById('hue').checked) ||
+    (document.getElementById('bac').checked)) {
+      if(document.getElementById('nue').checked){
+        ing1 = 1
+      }
+      if(document.getElementById('miel').checked){
+         ing2 = 1
+      }
+      if (document.getElementById('hue').checked){
+         ing3 = 1
+      }
+      if (document.getElementById('bac').checked){
+         ing4 = 1
+      }
+      comprobacion3 = 1
+    }else{
+      alert("Debes seleccionar almenos un Ingrediente")
+    }
+   */ 
+  
+  let ingr1 = document.getElementById('nue')
+  let ingr2 = document.getElementById('miel')
+  let ingr3 = document.getElementById('hue')
+  let ingr4 = document.getElementById('bac')
+  let vaIngr1 = ingr1.value
+  let vaIngr2 = ingr2.value
+  let vaIngr3 = ingr3.value
+  let vaIngr4 = ingr4.value
+
+  let difIngr = [vaIngr1, vaIngr2, vaIngr3, vaIngr4]
+  
+  let acumulador2 = 0
+  let contador2 = 0
+  for(let tipos of difIngr){
+    switch (tipos){
+      case "Nue":
+        if(document.getElementById('nue').checked){
+          ing1 = 1
+          comprobacion3 = 1
+          acumulador2 = -1
+        }
+        break;
+      case "Miel":
+        if(document.getElementById('miel').checked){
+          ing2 = 1
+          comprobacion3 = 1
+          acumulador2 = -1
+        }
+        break;
+      case "Hue":
+        if (document.getElementById('hue').checked){
+          ing3 = 1
+          comprobacion3 = 1
+          acumulador2 = -1
+        }
+        break;
+      case "Bac":
+        if (document.getElementById('bac').checked){
+          ing4 = 1
+          comprobacion3 = 1
+          acumulador2 = -1
+        }
+        break;
+    }
+    acumulador2 += contador2;
+    contador2 ++;
+    if (acumulador2 == 6){
+      alert("Debes escoger almenos un ingrediente")
+    }
+  }
+
+      ingredientes = ing1 + ing2 + ing3 + ing4
+      
+      total = pizza + ingredientes
+
+      /** Aqui si todas las comprobaciones se cumplen te devuelve el importe total 
+       * del coste de la pizza y ademas te deja enviar el formulario, en caso contrario
+       * de que alguna comprobacion no se cumpliera porque faltara algun campo, el formulario
+       * no se enviaria
+       */
+      if ((comprobacion1 && comprobacion2 && comprobacion3) == 1){
+        alert("El importe total a pagar es: " + total + "€")
+        return ok
+      }
+     return false
+  }
+
+ 
+/**creo la funcion window.onload para cargar el javascript una vez se haya cargado la pagina completamente */
 window.onload = function(){
       cargar.onclick = cargarFormulario;
+      /** Esta es la funcion que llama a la funcion validar una vez pulsas sobre el boton enviar comanda  */
+      encoman.onclick = function(e){
+        if(!validarFormulario()){
+          e.preventDefault()
+        }
+      }
+      
+
     
 }
 
