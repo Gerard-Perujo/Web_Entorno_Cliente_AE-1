@@ -1,0 +1,73 @@
+<!-- 
+En esta actividad debes desarrollar un formulario completo, sin envío al servidor, 
+que sirva para dar de alta un pedido de una pizza dentro de una web de una pizzería.
+
+Los campos del formulario son los siguientes:
+
+Nombre
+Dirección
+Teléfono
+Email
+Un radio button con el tamaño de la pizza, pudiendo ser pequeña, mediana o grande
+4 Checkbox con los diferentes ingredientes de la pizza
+Un botón de procesar el pedido
+Todos los campos tienen que estar rellenos de tipo texto deben de estar rellenos para que sean válidos, 
+además debe de elegir obligatoriamente un tamaño de la pizza y al menos un ingrediente para ella.
+
+Al pulsar el botón de procesar el pedido, se mostrará el precio total del pedido calculándolo en base a los siguientes parámetros:
+
+5€ para la pizza pequeña
+10€ para la pizza mediana
+15€ para la pizza grande
+Cada ingrediente elegido tendrá un valor de 1€
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+</head>
+<body>
+    <h1>Pizzeria Essenza di Trastevere</h1>
+    <h2>🍕Su pedido pizzero🍕</h2>
+    <form method="get">
+        <fieldset>
+            <legend>Por favor, rellene los  siguientes datos personales:</legend>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre" placeholder="José López García" required/>
+        </br>
+            <label for="direccion">Dirección:</label>
+            <input id="direccion" type="text" name="direccion" placeholder="Calle del Pez, 3" required/>
+        </br>
+            <label for="telefono">Teléfono:</label>
+            <input id="telefono" type="tel" name="telefono" placeholder="699346100" required/>
+        </br>
+            <label for="email">Correo electrónico:</label>
+            <input id="email" type="email" name="email" placeholder="pizzeria.trastevere@gmail.com" required/>
+        </br>
+        </fieldset>
+        </br>
+        <fieldset>
+            <legend>Diseñe su propia pizza:</legend>
+            <label for="size">Tamaño de la pizza:</label>
+            </br>
+            <input type="radio" name="size" value="p"/> Pequeña<br/>
+            <input type="radio" name="size" value="m"/> Mediana<br/>
+            <input type="radio" name="size" value="g" checked/> Grande
+            <p>*Precios: 5€ tamaño pequeño, 10€ tamaño mediano y 15€ tamaño grande</p>
+            </br>
+            <label for="ingredientes">Escoja los ingredientes:</label>
+            </br>
+            <input type="checkbox" name="ingredientes" value="s" checked/>Salchicha bávara<br/>
+            <input type="checkbox" name="ingredientes" value="c" checked/>Carne picada<br/>
+            <input type="checkbox" name="ingredientes" value="m" checked/>Miel y mostaza<br/>
+            <input type="checkbox" name="ingredientes" value="j" checked/>Jamón serrano
+            <p>*Cada ingrediente seleccionado cuesta 1€ extra.</p>
+        </fieldset> 
+        </br>
+        <input type="submit" value="Procesar pedido"/>
+    </form>    
+</body>
+</html>
