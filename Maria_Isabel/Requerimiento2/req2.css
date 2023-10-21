@@ -8,8 +8,6 @@ body{
 h1{
     font-style: italic;
     text-align: center;
-    /*background-color: rgb(199, 255, 236);*/
-    /*background-color: red;*/
     background-image: url('img/italia.png');
     background-size: cover
 }
