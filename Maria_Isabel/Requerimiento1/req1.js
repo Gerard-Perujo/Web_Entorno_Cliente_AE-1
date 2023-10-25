@@ -1,23 +1,48 @@
-/*
-REQUERIMIENTO 1
+window.addEventListener("load", function inicio(){
+    
+    loading();
 
-Se quiere generar una página web completamente por JavaScript, modificando el árbol DOM. La página web solo tendrá un contenedor (DIV) y sobre dicho contenedor y por medio de JavaScript se añadirán elementos a dicho contenedor. La temática de la web se deja libre al alumno. No es necesario usar CSS. Se valorará usar funciones propias de modificación del árbol DOM y no usar innerHTML.
+    function loading(){
+        /*
+        //Crear nodo formulario
+        let formulario=document.createElement("form");
+        formulario.method="get";    
+        //formulario.id="jsFormulario";   
+        document.body.appendChild(formulario); 
 
-Se añadirá al menos los siguientes elementos HTML a un formulario
-
-Campos de texto donde poner el DNI, el nombre y los apellidos, la dirección y el teléfono.
-Dos radio button, con 4 opciones a elegir
-Cinco checkbox diferentes
-2 imágenes
-Un campo select
-Un text area
-*/
-
-window.onload = function(){
-    <div>
-
+        //Crear nodo fieldset
+        let field1=document.createElement("fieldset");   
+        document.body.form.appendChild(field1);  
 
         
-    </div>
-}
+        //Crear nodo legend
+        let leyenda1=document.createElement("legend");
+        let leyendita1=document.createTextNode("Por favor, rellene los  siguientes datos personales:");
+        leyenda1.appendChild(leyendita1);
+        document.body.form.fieldset.appendChild("leyenda1");
+        */
+
+        let formulario=document.createElement("form")
+        formulario.setAttribute("method", "get")
+        formulario.setAttribute("id", "jsFormulario")
+
+        let field=document.createElement("fieldset")
+        
+
+
+        div1.appendChild(formulario)
+        
+
+           
+
+        
+
+    }
+       
+    
+    })
+
+
+
+
 
