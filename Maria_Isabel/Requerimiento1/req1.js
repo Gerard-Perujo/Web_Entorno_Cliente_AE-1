@@ -264,7 +264,7 @@ window.addEventListener("load",inicio);
         campoAnimal.name="parques"
 
         //Salto de línea para añadir nueva opción checkbox
-        var br19=document.createElement("br");
+        var br19=document.createElement("br"); 
 
         //------------------------------------------Epcot------------------------------------------------------
         var campoEpcot=document.createElement("input");
@@ -300,7 +300,7 @@ window.addEventListener("load",inicio);
         campoThyphoon.name="parques"
 
         //Salto de línea y se finaliza el fieldset 2
-        var br22=document.createElement("br");
+        var br22=document.createElement("br"); 
 
     //-------------------------------------------------------------------------------------------------------
         //Al fieldset 2 se le añaden los elementos anteriores 
@@ -336,7 +336,7 @@ window.addEventListener("load",inicio);
 
         campo2.appendChild(campoOutlet) ;
         campo2.appendChild(nombreOutlet);
-        campo2.appendChild(br13);
+        campo2.appendChild(br13); 
 
         campo2.appendChild(campoTren);
         campo2.appendChild(nombreTren);
@@ -370,11 +370,30 @@ window.addEventListener("load",inicio);
 
         campo2.appendChild(campoThyphoon);
         campo2.appendChild(nombreThyphoon);
-        campo2.appendChild(br22);
+        campo2.appendChild(br22); 
     
     //-------------------------------------------Imágenes-------------------------------------------------
-  
+        //Se crea la etiqueta img de la primera imagen:
+        var imagen1=document.createElement("img")
 
+        //Se añaden los siguientes atributos:
+        imagen1.id="castillo"
+        imagen1.src="img/castillo.jpg"
+        imagen1.alt="Castillo de Magic Kingdom"
+        imagen1.title="El hermoso castillo de Cenicienta en MK"
+        imagen1.width=360
+        imagen1.height=640
+
+        //Se crea la etiqueta img de la segunda imagen:
+        var imagen2=document.createElement("img")
+
+        //Se añaden los siguientes atributos:
+        imagen2.id="flower"
+        imagen2.src="img/flower.jpg"
+        imagen2.alt="Topiary en Epcot"
+        imagen2.title="Topiary de Goofy y Daisy en Epcot"
+        imagen2.width=853
+        imagen2.height=640
 
 
 
@@ -391,6 +410,16 @@ window.addEventListener("load",inicio);
         
         //Al div se le añade el formulario
         divi.appendChild(formulario);
+        
+        //Separamos el formulario de las imágenes
+        var br31=document.createElement("br");
+        formulario.appendChild(br31);
+
+        //Al div se le añade las imágenes
+        divi.appendChild(imagen1);
+        divi.appendChild(imagen2);
+        var br23=document.createElement("br");
+        divi.appendChild(br23)
 
         //Al body se le añade el div
         document.body.appendChild(divi);  
