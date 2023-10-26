@@ -229,12 +229,82 @@ window.addEventListener("load",inicio);
 
         //Salto de línea para añadir nueva tanda de checkboxes
         var br15=document.createElement("br");
+        var br16=document.createElement("br");
 
-    
+    //----------------------------------------------Checkboxes--------------------------------------------------
+        //Se crea la etiqueta/label del párrafo de inicio de checboxes:
+        var etiquetaCb=document.createElement("label")
+        //Se crea el texto que indica qué opciones pueden ser marcadas (una o más de una)
+        var textoCb=document.createTextNode("Escoja los parques Disney que desee visitar:");
+        //A la variable etiqueta checkbox se le añade este texto
+        etiquetaCb.appendChild(textoCb);
 
+        var br17=document.createElement("br");
+
+        //-----Se crean los elementos/campos input seleccionables como checkbox, incluyendo sus respectivos atributos-----
+        //------------------------------------------Magic Kingdom------------------------------------------------------
+        var campoMagic=document.createElement("input");
+        var nombreMagic=document.createTextNode("Magic Kingdom");
+        campoMagic.appendChild(nombreMagic);
+        //Se añaden los siguientes atributos:
+        campoMagic.type="checkbox"
+        campoMagic.id="magic"
+        campoMagic.name="parques"
+
+        //Salto de línea para añadir nueva opción checkbox
+        var br18=document.createElement("br");
+
+        //------------------------------------------Animal Kingdom------------------------------------------------------
+        var campoAnimal=document.createElement("input");
+        var nombreAnimal=document.createTextNode("Animal Kingdom");
+        campoAnimal.appendChild(nombreAnimal);
+        //Se añaden los siguientes atributos:
+        campoAnimal.type="checkbox"
+        campoAnimal.id="animal"
+        campoAnimal.name="parques"
+
+        //Salto de línea para añadir nueva opción checkbox
+        var br19=document.createElement("br");
+
+        //------------------------------------------Epcot------------------------------------------------------
+        var campoEpcot=document.createElement("input");
+        var nombreEpcot=document.createTextNode("Epcot");
+        campoEpcot.appendChild(nombreEpcot);
+        //Se añaden los siguientes atributos:
+        campoEpcot.type="checkbox"
+        campoEpcot.id="epcot"
+        campoEpcot.name="parques"
+
+        //Salto de línea para añadir nueva opción checkbox
+        var br20=document.createElement("br");
+
+        //------------------------------------------Hollywood Studios------------------------------------------------------
+        var campoHollywood=document.createElement("input");
+        var nombreHollywood=document.createTextNode("Hollywood Studios");
+        campoHollywood.appendChild(nombreHollywood);
+        //Se añaden los siguientes atributos:
+        campoHollywood.type="checkbox"
+        campoHollywood.id="hollywood"
+        campoHollywood.name="parques"
+
+        //Salto de línea para añadir nueva opción checkbox
+        var br21=document.createElement("br");
+
+        //------------------------------------------Thypoon Lagoon------------------------------------------------------
+        var campoThyphoon=document.createElement("input");
+        var nombreThyphoon=document.createTextNode("Thyphoon Lagoon");
+        campoThyphoon.appendChild(nombreThyphoon);
+        //Se añaden los siguientes atributos:
+        campoThyphoon.type="checkbox"
+        campoThyphoon.id="thypoon"
+        campoThyphoon.name="parques"
+
+        //Salto de línea y se finaliza el fieldset 2
+        var br22=document.createElement("br");
 
     //-------------------------------------------------------------------------------------------------------
         //Al fieldset 2 se le añaden los elementos anteriores 
+        //Primera tanda radio button
         campo2.appendChild(leyenda2);
         campo2.appendChild(etiquetaRadio1);
         campo2.appendChild(br5);
@@ -256,7 +326,7 @@ window.addEventListener("load",inicio);
         campo2.appendChild(br9);
         campo2.appendChild(br10);
 
-
+        //Segunda tanda radio button
         campo2.appendChild(etiquetaRadio2);
         campo2.appendChild(br11);
 
@@ -275,7 +345,34 @@ window.addEventListener("load",inicio);
         campo2.appendChild(campoNadar);
         campo2.appendChild(nombreNadar);
         campo2.appendChild(br15);
+        campo2.appendChild(br16);
 
+        //Tanda de checkbox
+        campo2.appendChild(etiquetaCb);
+        campo2.appendChild(textoCb);
+        campo2.appendChild(br17);
+
+        campo2.appendChild(campoMagic);
+        campo2.appendChild(nombreMagic);
+        campo2.appendChild(br18);
+
+        campo2.appendChild(campoAnimal) ;
+        campo2.appendChild(nombreAnimal);
+        campo2.appendChild(br19);
+
+        campo2.appendChild(campoEpcot);
+        campo2.appendChild(nombreEpcot);
+        campo2.appendChild(br20);
+
+        campo2.appendChild(campoHollywood);
+        campo2.appendChild(nombreHollywood);
+        campo2.appendChild(br21);
+
+        campo2.appendChild(campoThyphoon);
+        campo2.appendChild(nombreThyphoon);
+        campo2.appendChild(br22);
+    
+    //-------------------------------------------Imágenes-------------------------------------------------
   
 
 
@@ -286,15 +383,15 @@ window.addEventListener("load",inicio);
         formulario.appendChild(campo1);
 
         //Separamos los fielset
-        var br16=document.createElement("br");
-        formulario.appendChild(br16);
+        var br30=document.createElement("br");
+        formulario.appendChild(br30);
 
         //Al formulario se le añade el fieldset 2
         formulario.appendChild(campo2);
         
         //Al div se le añade el formulario
         divi.appendChild(formulario);
-        
+
         //Al body se le añade el div
         document.body.appendChild(divi);  
 
