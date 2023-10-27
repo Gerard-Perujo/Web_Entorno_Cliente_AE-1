@@ -505,6 +505,15 @@ window.addEventListener("load",inicio);
         etiquetaPeticiones.appendChild(br29);
         etiquetaPeticiones.appendChild(etiquetaTextarea);
  
+    //-----------------------------------------Botón---------------------------------------------------
+        //Se crea la etiqueta/label del botón
+        var etiquetaBoton=document.createElement("input")
+        //Añadimos atributos
+        etiquetaBoton.class="button"
+        etiquetaBoton.type="submit"
+        etiquetaBoton.value="✨Reservar las vacaciones más mágicas de la Tierra✨"
+        etiquetaBoton.id="enviar"
+
     //-------------------------------------------- Final -------------------------------------------
         //Al formulario se le añade el fieldset 1
         formulario.appendChild(campo1);
@@ -531,19 +540,24 @@ window.addEventListener("load",inicio);
         formulario.appendChild(br33);
         formulario.appendChild(etiquetaSelect);
         var br34=document.createElement("br");
-        formulario.appendChild(br34);
+        formulario.appendChild(br34); 
+        var br35=document.createElement("br");
+        formulario.appendChild(br35);
 
         //Al formulario se le añade el textarea
         formulario.appendChild(etiquetaPeticiones);
         
 
         //Al formulario se le añade el botón
+        var br36=document.createElement("br");
+        formulario.appendChild(br36);
+        formulario.appendChild(etiquetaBoton);
         
         //Al div se le añade el formulario
         divi.appendChild(formulario);
 
         //Al body se le añade el div
         document.body.appendChild(divi);  
-
+ 
     }
     
