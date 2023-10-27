@@ -393,10 +393,118 @@ window.addEventListener("load",inicio);
         imagen2.alt="Topiary en Epcot"
         imagen2.title="Topiary de Goofy y Daisy en Epcot"
         imagen2.width=853
-        imagen2.height=640
+        imagen2.height=640 
 
+    //------------------------------------------Campo select-----------------------------------------------------------
+         //Se crea la etiqueta/label del select:
+         var etiquetaSelect=document.createElement("label")
+         //Se crea el texto que indica el contenido de las opciones a escoger
+         var textoSelect=document.createTextNode("Escoja otro resort Disney que desee visitar:");
+         //A la variable etiqueta general del select se le añade este texto
+         etiquetaSelect.appendChild(textoSelect);
+         etiquetaSelect.for="mundo"
 
+         //Se crea la verdadera etiqueta/label del select:
+         var etiquetaSeleccion=document.createElement("select")
+         //Añadimos atributo name
+         etiquetaSeleccion.name="mundo"
 
+         var br23=document.createElement("br");
+
+         //-----Se crean los elementos/campos opcion seleccionables, incluyendo su value-----
+         //------------------------------------------California------------------------------------------------------
+         var campoCalifornia=document.createElement("option");
+         var nombreCalifornia=document.createTextNode("Disneyland Resort");
+         campoCalifornia.appendChild(nombreCalifornia);
+         //Se añade el atributo value:
+         campoCalifornia.value="california"
+ 
+         //Salto de línea para añadir nueva opción select
+         var br24=document.createElement("br");
+
+         //------------------------------------------París------------------------------------------------------
+         var campoParis=document.createElement("option");
+         var nombreParis=document.createTextNode("Disneyland París");
+         campoParis.appendChild(nombreParis);
+         //Se añade el atributo value:
+         campoParis.value="paris"
+ 
+         //Salto de línea para añadir nueva opción select
+         var br25=document.createElement("br"); 
+
+         //------------------------------------------Tokio------------------------------------------------------
+         var campoTokyo=document.createElement("option");
+         var nombreTokyo=document.createTextNode("Tokyo Disney Resort");
+         campoTokyo.appendChild(nombreTokyo);
+         //Se añade el atributo value:
+         campoTokyo.value="tokyo"
+         campoTokyo.selected=true;
+ 
+         //Salto de línea para añadir nueva opción select
+         var br26=document.createElement("br");
+
+         //------------------------------------------Hong Kong------------------------------------------------------
+         var campoHong=document.createElement("option");
+         var nombreHong=document.createTextNode("Hong Kong Disney");
+         campoHong.appendChild(nombreHong);
+         //Se añade el atributo value:
+         campoHong.value="hong"
+ 
+         //Salto de línea para añadir nueva opción select
+         var br27=document.createElement("br");
+
+         //------------------------------------------Shanghái------------------------------------------------------
+         var campoShan=document.createElement("option");
+         var nombreShan=document.createTextNode("Shanghai Disney Resort");
+         campoShan.appendChild(nombreShan);
+         //Se añade el atributo value:
+         campoShan.value="shan"
+ 
+         //Salto de línea para separar elementos
+         var br28=document.createElement("br");
+
+    //------------------------------------------------------------------------------------------------- 
+        //Añadimos elementos a la etiqueta
+        etiquetaSelect.appendChild(etiquetaSeleccion);
+        etiquetaSeleccion.appendChild(br23);
+
+        etiquetaSeleccion.appendChild(campoCalifornia);
+        etiquetaSeleccion.appendChild(br24); 
+
+        etiquetaSeleccion.appendChild(campoParis);
+        etiquetaSeleccion.appendChild(br25);
+
+        etiquetaSeleccion.appendChild(campoTokyo);
+        etiquetaSeleccion.appendChild(br26);
+
+        etiquetaSeleccion.appendChild(campoHong);
+        etiquetaSeleccion.appendChild(br27);
+
+        etiquetaSeleccion.appendChild(campoShan);
+        etiquetaSeleccion.appendChild(br28); 
+
+    //---------------------------------------------Textarea-----------------------------------------------
+        //Se crea la etiqueta/label introductoria del textarea:
+        var etiquetaPeticiones=document.createElement("label")
+        //Se crea el texto que indica qué escribir en ese textarea
+        var textoPeticiones=document.createTextNode("Más peticiones:");
+        //A la variable etiqueta del textarea se le añade este texto
+        etiquetaPeticiones.appendChild(textoPeticiones);
+        etiquetaPeticiones.for="mundo"
+        var br29=document.createElement("br");
+
+        //Se crea la etiqueta/label del textarea:
+        var etiquetaTextarea=document.createElement("textarea")
+        //Añadimos atributos
+        etiquetaTextarea.style="resize: none"
+        etiquetaTextarea.rows=5
+        etiquetaTextarea.cols=80
+        etiquetaTextarea.name="peticiones"
+    //------------------------------------------------------------------------------------------------
+        //Añadimos elementos a la etiqueta label
+        etiquetaPeticiones.appendChild(br29);
+        etiquetaPeticiones.appendChild(etiquetaTextarea);
+ 
     //-------------------------------------------- Final -------------------------------------------
         //Al formulario se le añade el fieldset 1
         formulario.appendChild(campo1);
@@ -407,19 +515,32 @@ window.addEventListener("load",inicio);
 
         //Al formulario se le añade el fieldset 2
         formulario.appendChild(campo2);
-        
-        //Al div se le añade el formulario
-        divi.appendChild(formulario);
-        
-        //Separamos el formulario de las imágenes
+
+        //Separamos las imágenes
         var br31=document.createElement("br");
         formulario.appendChild(br31);
 
-        //Al div se le añade las imágenes
-        divi.appendChild(imagen1);
-        divi.appendChild(imagen2);
-        var br23=document.createElement("br");
-        divi.appendChild(br23)
+        //Al formulario se le añade las imágenes
+        formulario.appendChild(imagen1);
+        formulario.appendChild(imagen2);
+        var br32=document.createElement("br");
+        formulario.appendChild(br32);
+
+        //Al formulario se le añaden las opciones del select
+        var br33=document.createElement("br");
+        formulario.appendChild(br33);
+        formulario.appendChild(etiquetaSelect);
+        var br34=document.createElement("br");
+        formulario.appendChild(br34);
+
+        //Al formulario se le añade el textarea
+        formulario.appendChild(etiquetaPeticiones);
+        
+
+        //Al formulario se le añade el botón
+        
+        //Al div se le añade el formulario
+        divi.appendChild(formulario);
 
         //Al body se le añade el div
         document.body.appendChild(divi);  
