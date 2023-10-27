@@ -547,7 +547,6 @@ window.addEventListener("load",inicio);
         //Al formulario se le añade el textarea
         formulario.appendChild(etiquetaPeticiones);
         
-
         //Al formulario se le añade el botón
         var br36=document.createElement("br");
         formulario.appendChild(br36);
