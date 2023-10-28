@@ -511,7 +511,7 @@ window.addEventListener("load",inicio);
         //Añadimos atributos
         etiquetaBoton.class="button"
         etiquetaBoton.type="submit"
-        etiquetaBoton.value="✨Reserlet las vacaciones más mágicas de la Tierra✨"
+        etiquetaBoton.value="✨Reservar las vacaciones más mágicas de la Tierra✨"
         etiquetaBoton.id="enviar"
 
     //-------------------------------------------- Final -------------------------------------------
